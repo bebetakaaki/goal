@@ -1,3 +1,12 @@
 .top
   .top_brand
-    JACKROSE
+  = link_to new_group_path,  class: "icon_edit" do
+    = icon('fas', 'edit')
+  .GroupList
+  - current_user.groups.each do |group|
+    .Group
+      = link_to '#' do
+        .Group__name
+          = group.name
+        .Group__message
+          メッセージはまだありません
